@@ -6,7 +6,9 @@
   </head>
   <body>
     <script type="module">
-await cheerpjInit();
+await cheerpjInit({
+  overrideDocumentBase: window.location.href,
+});
 cheerpjCreateDisplay(800, 600);
 await cheerpjRunMain("Main", "/app/Application.jar");
     </script>
