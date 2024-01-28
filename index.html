@@ -8,7 +8,7 @@
   <body>
     <script type="module">
 await cheerpjInit({
-  overrideDocumentBase: window.location.href,
+  overrideDocumentBase: new URL(window.location.href).pathname,
 });
 cheerpjCreateDisplay(800, 600);
 await cheerpjRunMain("Main", "/app/Application.jar");
